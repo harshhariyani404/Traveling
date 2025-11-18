@@ -1,0 +1,52 @@
+[33mcommit 2d3b8eac95f2986eb6e442d8f00a782117d9dd99[m
+Author: harshhariyani404 <harsh.hariyani404@gmail.com>
+Date:   Wed Nov 19 00:34:54 2025 +0530
+
+    Travel Page is Complete
+
+.gitignore
+README.md
+db.json
+eslint.config.js
+image.png
+index.html
+package-lock.json
+package.json
+src/App.css
+src/App.jsx
+src/assets/Steps/airport.jpg
+src/assets/Steps/choose.jpg
+src/assets/Steps/payment.jpg
+src/assets/Steps/profile.jpg
+src/assets/Steps/trip.jpg
+src/assets/appstore.jpg
+src/assets/decor.jpg
+src/assets/flight.jpg
+src/assets/heroimg.jpg
+src/assets/image.jpg
+src/assets/logo.jpg
+src/assets/mic.jpg
+src/assets/playstore.jpg
+src/assets/setting.jpg
+src/assets/testimonials/rp1.jpg
+src/assets/testimonials/rp2.jpg
+src/assets/wether.jpg
+src/components/Category.jsx
+src/components/Destinations.jsx
+src/components/Footer.jsx
+src/components/Hero.jsx
+src/components/Nav.jsx
+src/components/Steps.jsx
+src/components/Subscribe.jsx
+src/components/Testimonials.jsx
+src/index.css
+src/main.jsx
+src/style/Category.module.css
+src/style/Destinations.module.css
+src/style/Footer.module.css
+src/style/Hero.module.css
+src/style/Nav.module.css
+src/style/Steps.module.css
+src/style/Subscribe.module.css
+src/style/Testimonials.module.css
+vite.config.js

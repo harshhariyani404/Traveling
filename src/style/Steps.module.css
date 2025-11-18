@@ -1,0 +1,263 @@
+/* ============================
+      MAIN SECTION
+============================ */
+.stepsSection {
+  padding: 80px 0;
+}
+
+.stepsInner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+/* ============================
+      LEFT TEXT AREA
+============================ */
+.left {
+  max-width: 500px;
+}
+
+.smallTitle {
+  color: #5e6282;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1b1d4d;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+/* ============================
+      STEPS LIST
+============================ */
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.stepIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b1d4d;
+  margin-bottom: 6px;
+}
+
+.stepDesc {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ============================
+      RIGHT (TRIP CARD)
+============================ */
+.right {
+  position: relative;
+}
+
+.tripCard {
+  width: 320px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 18px;
+
+  box-shadow:
+    0px 10px 25px rgba(0,0,0,0.1),      /* normal drop shadow */
+    35px -35px 55px rgba(89,176,230,0.25); /* blue glow */
+}
+
+
+.tripImg {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+.tripTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1b1d4d;
+}
+
+.tripMeta {
+  color: #777;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.iconReact {
+  font-size: 20px;
+  color: #4d4d4d;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.iconReact:hover {
+  color: #4475f2;
+}
+
+.people {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #5e6282;
+}
+
+/* ============================
+      FLOATING CARD
+============================ */
+.floatCard {
+  position: absolute;
+  right: -60px;
+  bottom: 20px;
+
+  background: #fff;
+  width: 200px;
+  padding: 15px;
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.floatImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.floatStatus {
+  font-size: 12px;
+  color: #5e6282;
+}
+
+.floatTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b1d4d;
+  margin: 2px 0 4px;
+}
+
+.progressText {
+  font-size: 12px;
+}
+
+.progressText span {
+  font-weight: 700;
+  color: #8A79DF;
+}
+
+.progressBar {
+  width: 100%;
+  height: 5px;
+  background: #eee;
+  border-radius: 5px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 40%;
+  height: 100%;
+  background: #8A79DF;
+}
+
+/* ============================
+      RESPONSIVE (Tablet)
+============================ */
+@media (max-width: 900px) {
+  .stepsInner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .tripCard {
+    width: 85%;
+    max-width: 350px;
+  }
+
+  /* Floating card centered */
+  .floatCard {
+    right: 0;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    width: 220px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+}
+
+/* ============================
+      RESPONSIVE (Mobile)
+============================ */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .stepItem {
+    justify-content: center;
+  }
+
+  .stepDesc {
+    max-width: 260px;
+  }
+
+  .tripCard {
+    width: 100%;
+    max-width: 310px;
+  }
+
+  .floatCard {
+    width: 200px;
+    bottom: -45px;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .floatImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .floatTitle {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'google sans-serif', sans-serif;
+}
+.page {
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 40% auto;     /* perfect for desktop */
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    background-size: 70% auto;
+    background-position: top right;
+  }
+}
+
+/* Mobile */
+/* Mobile */
+@media (max-width: 600px) {
+  .page {
+    background-size: 140% auto;     /* much bigger for mobile */
+    background-position: top right; /* stick to right side always */
+    background-repeat: no-repeat;
+  }
+}
+

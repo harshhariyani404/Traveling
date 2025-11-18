@@ -1,0 +1,119 @@
+.navContainer {
+  width: 100%;
+  padding: 25px 0;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.navInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2e2e2e;
+  cursor: pointer;
+}
+
+.logoImg {
+  width: 150px;
+  height: auto;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #2e2e2e;
+  font-weight: 500;
+}
+
+.menu li {
+  cursor: pointer;
+  padding: 6px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.menu li:hover {
+  border: 1px solid #2e2e2e;
+  background-color: #f7f7f7;
+}
+
+/* Signup button */
+.signupBtn {
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid #2e2e2e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Language */
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ----------------------------------- */
+/* RESPONSIVE NAV */
+/* ----------------------------------- */
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 90px;
+    right: 25px;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+    gap: 20px;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+
+  .menuOpen {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoImg {
+    width: 120px;
+  }
+}

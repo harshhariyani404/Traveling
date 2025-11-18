@@ -1,0 +1,305 @@
+.section {
+  padding: 100px 0;
+}
+
+/* =============================
+   LAYOUT WRAPPER
+============================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;   /* prevents shifting */
+  gap: 60px;
+}
+
+/* =============================
+   LEFT SIDE
+============================= */
+.left {
+  max-width: 450px;
+}
+
+.topText {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8b8b8b;
+  letter-spacing: 1px;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #162447;
+  line-height: 1.3;
+}
+
+/* DOTS */
+.dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #d0d0d0;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.activeDot {
+  background: #555;
+  transform: scale(1.3);
+}
+
+/* =============================
+   RIGHT SIDE
+============================= */
+.right {
+  position: relative;  
+  width: 420px;         /* keep desktop layout solid */
+}
+
+/* BACK CARD */
+.backCard {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 360px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* MAIN CARD */
+.card {
+  width: 420px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 5;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* AVATAR */
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -25px;
+  left: 25px;
+}
+
+.message {
+  margin-top: 35px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.name { margin-top: 20px; font-weight: 700; color: #1b1c2f; }
+.role { color: #777; font-size: 13px; }
+
+/* ============================
+   FADE TRANSITION
+============================ */
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+
+/* =============================
+   ARROWS (DESKTOP PERFECT ALIGN)
+============================= */
+.arrowUp,
+.arrowDown {
+  position: absolute;
+  right: -60px;      /* perfect PC placement */
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: 0.2s ease;
+  z-index: 10;
+}
+
+.arrowUp { top: 60px; }
+.arrowDown { top: 110px; }
+
+/* arrow hover */
+.arrowUp:hover,
+.arrowDown:hover {
+  background: #f7f7f7;
+}
+
+/* =============================
+   BRANDS SECTION
+============================= */
+.brandsSection {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.brandsCard {
+  width: 90%;
+  max-width: 1100px;
+  padding: 35px 50px;
+  background: #fff;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoBox {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* =============================
+   TABLET RESPONSIVE
+============================= */
+@media (max-width: 1024px) {
+  .arrowUp, .arrowDown {
+    right: -30px;   /* WAS -40px, now more visible */
+  }
+}
+
+
+/* =============================
+   MOBILE TABLET
+============================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .card,
+  .backCard {
+    width: 90%;
+  }
+  .logo{
+    max-height: 50px;
+  }
+
+
+  /* WRAP ARROWS INTO A ROW */
+  .arrowsWrapper {
+    display: flex;
+    gap: 15px;
+    margin-top: 18px;
+    justify-content: center;
+  }
+
+  .arrowUp,
+  .arrowDown {
+    position: static;       /* remove absolute */
+    margin: 0;
+  }
+}
+
+
+/* =============================
+   MOBILE
+============================= */
+@media (max-width: 600px) {
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+  .logo{
+    max-height: 50px;
+  }
+  .card,
+  .backCard {
+    width: 100%;
+    padding: 25px;
+  }
+
+  /* SAME AS TABLET: SIDE-BY-SIDE */
+  .arrowsWrapper {
+    display: flex;
+    gap: 15px;
+    margin-top: 18px;
+    justify-content: center;
+  }
+
+  .arrowUp,
+  .arrowDown {
+    position: static;
+    margin: 0;
+    display: inline-flex;
+  }
+
+  .brandsCard {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .logoBox {
+    width: 100px;
+    height: 30px;
+  }
+}
+
