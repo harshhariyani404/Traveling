@@ -20,7 +20,7 @@ const Testimonials = () => {
     const [fade, setFade] = useState(true);   // 🔥 fade animation state
 
     useEffect(() => {
-        axios.get("http://localhost:4000/testimonials")
+        axios.get("https://travel-json-api.onrender.com/testimonials")
             .then(res => setTestimonials(res.data))
             .catch(err => console.log("Error:", err));
     }, []);

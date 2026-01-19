@@ -7,7 +7,7 @@ import styles from '../style/Destinations.module.css';
 const Destinations = () => {
     const [destinations, setDestinations] = useState([]);
     useEffect(() => {
-        axios.get("https://travel-json-api.onrender.com/destinations")
+        axios.get("http://localhost:4000/destinations")
             .then(res => {
                 console.log("API DATA:", res.data);
                 setDestinations(res.data);

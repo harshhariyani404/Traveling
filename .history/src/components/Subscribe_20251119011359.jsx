@@ -16,7 +16,7 @@ const handleSubmit = async (e) => {
   setStatusMessage("");
 
   try {
-    const response = await axios.post("https://travel-json-api.onrender.com/subscribers", {
+    const response = await axios.post("http://localhost:4000/subscribers", {
       email: email,
     });
 
