@@ -88,9 +88,9 @@ const Testimonials = () => {
 
                     {/* ARROWS */}
                     <div className={styles.arrowsWrapper}>
-                        <button className={styles.arrowUp} onClick={prev}>^</button>
-                        <button className={styles.arrowDown} onClick={next}>˅</button>
-                    </div>
+    <button className={styles.arrowUp} onClick={prev}>^</button>
+    <button className={styles.arrowDown} onClick={next}>˅</button>
+</div>
 
                 </div>
             </div>
